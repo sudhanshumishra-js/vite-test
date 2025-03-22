@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# 📝 ToDo Application (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Assignment built using **React**, **TypeScript**, **Tailwind** and **Material UI**.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **[Deployed App]()**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Features Checklist
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### ✅ Core Functionalities
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- [x] **Task Management:**
+  - Create, edit, delete, and mark tasks as complete/incomplete.
+  - Tasks move to appropriate sections upon status change.
+  - Confirmation modal before deleting a task.
+- [x] **State Management:**
+  - Implemented with **Context API**.
+  - Tasks persist in **localStorage**.
+- [x] **Validations & Error Handling:**
+  - Prevents duplicate task names.
+  - Ensures task descriptions are non-empty.
+  - Handles invalid inputs like empty task titles.
+  - **Global Error Boundary** to catch unexpected errors.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### ✅ Advanced Features
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [x] **Drag & Drop Sorting:**
+  - Reorder tasks within each section using **react-beautiful-dnd**.
+- [x] **Responsive UI:**
+  - Mobile-first design 
+
+### ❌ Testing
+
+- [ ] **Unit Tests:**
+  - Tests using **Jest** and **React Testing Library** are not included due to:
+    - Facing configuration issues with **Vite** when integrating React Testing Library and Jest.
+    - Due to time constraints, I couldn't push the test cases.
+
+---
+
