@@ -20,7 +20,6 @@ const TaskBoard = () => {
     "in-progress": "In Progress",
     completed: "Completed",
   };
-
   return (
     <Container className="flex flex-col">
       <CreateTask />

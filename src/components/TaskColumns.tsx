@@ -1,7 +1,7 @@
 import { Droppable } from "react-beautiful-dnd";
 import { Typography } from "@mui/material";
 import { Task } from "../types/types";
-import TaskItem from "./TskItem";
+import TaskItem from "./TaskItem";
 
 interface TaskColumnProps {
   status: Task["status"];
