@@ -16,7 +16,7 @@ const TaskColumn: React.FC<TaskColumnProps> = ({ status, title, tasks }) => {
         <div
           ref={provided.innerRef}
           {...provided.droppableProps}
-          className="p-4 border rounded-lg bg-gray-50 shadow-md min-h-[200px]"
+          className="p-4 border border-gray-200 rounded-lg bg-[#FCFAF8] shadow-md min-h-[200px]"
         >
           <Typography
             variant="h6"

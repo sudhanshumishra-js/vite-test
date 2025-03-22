@@ -13,6 +13,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useTaskContext } from "../context/TaskContext";
 import { Task } from "../types/types";
 import ConfirmationModal from "./modals/ConfirmationModal";
+import { buttonBase, statusColors } from "../helpers/constants";
 
 interface TaskItemProps {
   task: Task;
@@ -67,68 +68,56 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index }) => {
     switch (task.status) {
       case "todo":
         return (
-          <>
-            <Button
-              variant="contained"
-              color="primary"
-              size="small"
+          <div className="flex gap-2">
+            <button
+              className={`${buttonBase} ${statusColors.inProgress}`}
               onClick={() => handleMoveTask("in-progress")}
             >
               Mark In Progress
-            </Button>
-            <Button
-              variant="contained"
-              color="secondary"
-              size="small"
+            </button>
+            <button
+              className={`${buttonBase} ${statusColors.completed}`}
               onClick={() => handleMoveTask("completed")}
             >
               Mark Completed
-            </Button>
-          </>
+            </button>
+          </div>
         );
 
       case "in-progress":
         return (
-          <>
-            <Button
-              variant="contained"
-              color="success"
-              size="small"
+          <div className="flex gap-2">
+            <button
+              className={`${buttonBase} ${statusColors.completed}`}
               onClick={() => handleMoveTask("completed")}
             >
               Mark Completed
-            </Button>
-            <Button
-              variant="contained"
-              color="warning"
-              size="small"
+            </button>
+            <button
+              className={`${buttonBase} ${statusColors.todo}`}
               onClick={() => handleMoveTask("todo")}
             >
               Mark To Do
-            </Button>
-          </>
+            </button>
+          </div>
         );
 
       case "completed":
         return (
-          <>
-            <Button
-              variant="contained"
-              color="primary"
-              size="small"
+          <div className="flex gap-2">
+            <button
+              className={`${buttonBase} ${statusColors.inProgress}`}
               onClick={() => handleMoveTask("in-progress")}
             >
               Mark In Progress
-            </Button>
-            <Button
-              variant="contained"
-              color="warning"
-              size="small"
+            </button>
+            <button
+              className={`${buttonBase} ${statusColors.todo}`}
               onClick={() => handleMoveTask("todo")}
             >
               Mark To Do
-            </Button>
-          </>
+            </button>
+          </div>
         );
 
       default:
@@ -146,7 +135,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index }) => {
             {...provided.dragHandleProps}
             className="mb-2 shadow hover:shadow-lg transition-shadow"
           >
-            <Card>
+            <Card className="bg-[#FEFDFC]">
               <CardContent className="relative">
                 <IconButton
                   className="!absolute right-0 top-0"
@@ -201,7 +190,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index }) => {
                   </Typography>
                 )}
 
-                <Stack direction="column" spacing={1} className="mt-2">
+                <Stack direction="column" spacing={1} className="mt-7">
                   {renderButtons()}
                 </Stack>
               </CardContent>

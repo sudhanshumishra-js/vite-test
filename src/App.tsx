@@ -7,13 +7,8 @@ function App() {
   return (
     <TaskProvider>
       <ErrorBoundary>
-        <Container maxWidth="md" className="p-4">
-          <Typography
-            variant="h3"
-            align="center"
-            gutterBottom
-            className="text-3xl font-bold text-amber-600"
-          >
+        <Container maxWidth="lg" className="p-4 ">
+          <Typography variant="h4" align="center" gutterBottom className="mt-3">
             To-Do List
           </Typography>
           <TaskBoard />

@@ -7,3 +7,7 @@
 [draggable="true"]:active {
   cursor: grabbing;
 }
+
+body{
+  background-color:#FEFDFC;
+}
