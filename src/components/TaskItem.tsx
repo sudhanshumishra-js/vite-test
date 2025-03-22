@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { Draggable } from "react-beautiful-dnd";
 import {
-  Button,
   Card,
   CardContent,
   IconButton,
@@ -46,10 +45,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index }) => {
     setIsEditingDescription(false);
   };
 
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLInputElement>,
-    field: "title" | "description"
-  ) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") saveChanges();
     if (e.key === "Escape") {
       setEditedTitle(task.title);
@@ -152,7 +148,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index }) => {
                     value={editedTitle}
                     onChange={(e) => setEditedTitle(e.target.value)}
                     onBlur={saveChanges}
-                    onKeyDown={(e) => handleKeyDown(e as any, "title")}
+                    onKeyDown={(e) => handleKeyDown(e as any)}
                     fullWidth
                     size="small"
                     autoFocus
@@ -173,7 +169,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index }) => {
                     value={editedDescription}
                     onChange={(e) => setEditedDescription(e.target.value)}
                     onBlur={saveChanges}
-                    onKeyDown={(e) => handleKeyDown(e as any, "description")}
+                    onKeyDown={(e) => handleKeyDown(e as any)}
                     fullWidth
                     size="small"
                     multiline
