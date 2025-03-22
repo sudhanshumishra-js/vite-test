@@ -2,8 +2,6 @@
 
 Assignment built using **React**, **TypeScript**, **Tailwind** and **Material UI**.
 
-## 🚀 Live Demo
-
 🔗 **[Deployed App]()**
 
 ---
@@ -40,4 +38,8 @@ Assignment built using **React**, **TypeScript**, **Tailwind** and **Material UI
     - Due to time constraints, I couldn't push the test cases.
 
 ---
-
+### How to run on local? 
+- Clone repo
+- run ```npm install```
+- run ```rpm run dev```
+- Go to http://localhost:5173
