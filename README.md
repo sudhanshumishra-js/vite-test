@@ -2,7 +2,7 @@
 
 Assignment built using **React**, **TypeScript**, **Tailwind** and **Material UI**.
 
-🔗 **[Deployed App]()**
+🔗 **[Deployed App](https://todo-assignment-upcover.vercel.app/)**
 
 ---
 
