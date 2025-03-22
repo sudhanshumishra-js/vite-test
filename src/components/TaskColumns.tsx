@@ -11,7 +11,7 @@ interface TaskColumnProps {
 
 const TaskColumn: React.FC<TaskColumnProps> = ({ status, title, tasks }) => {
   return (
-    <Droppable droppableId={status}>
+    <Droppable droppableId={status} type="group">
       {(provided) => (
         <div
           ref={provided.innerRef}
