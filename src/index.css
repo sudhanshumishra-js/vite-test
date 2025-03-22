@@ -1,0 +1,9 @@
+@import "tailwindcss";
+/* index.css */
+[draggable="true"] {
+  cursor: grab;
+}
+
+[draggable="true"]:active {
+  cursor: grabbing;
+}
